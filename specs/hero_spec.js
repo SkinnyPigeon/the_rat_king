@@ -53,7 +53,22 @@ describe( "Our Hero", function() {
     assert.equal( 97, jeff.health )
   })
 
+  it( "Hero should gain attack damage", function() {
+    jeff.special();
+    assert.equal( 24, jeff.damage )
+  })
+
 })
+
+
+
+
+
+
+
+
+
+
 
 
 
