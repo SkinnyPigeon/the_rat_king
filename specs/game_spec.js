@@ -10,17 +10,12 @@ describe( "The Game, Are You Thinking About IT?!?!?!", function() {
 
   beforeEach( function() {
     game = new Game();
-
     ratKing = new Baddy( "Rat King", 100, "Chicken Drumsticks"  );
     dangerousMouse = new Baddy( "Dangereous Mouse", 75, "Pizza"  );
-
     steve = new Hero( "Steve", 100, "Chicken Drumsticks" );
-
     chicken = new Food( "Chicken Drumsticks", 10 );
     toast = new Food( "Toast", 3 );
-
     bob = new Rat( "bob", true );
-
     game.start( steve, ratKing );
 
 
@@ -45,6 +40,20 @@ describe( "The Game, Are You Thinking About IT?!?!?!", function() {
     game.players[0].special( game.players[1] )
     assert.equal( 76, game.players[1].health )
   })
+
+  it( "Should not be won", function() {
+    assert.equal( false, game.won() )
+  })
+
+  it( "Should be won", function() {
+    game.players[0].special( game.players[1] )
+    game.players[0].special( game.players[1] )
+    game.players[0].special( game.players[1] )
+    game.players[0].special( game.players[1] )
+    game.players[0].special( game.players[1] )
+    assert.equal( true, game.won() )
+  })
+
 
 } )
 

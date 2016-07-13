@@ -6,6 +6,9 @@ var Game = function() {
   };
   this.endTurn = function() {
     this.players.reverse();
+  };
+  this.won = function() {
+    return this.players[1].health <= 0
   }
 }
 
