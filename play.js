@@ -4,10 +4,6 @@ var Hero = require('./hero');
 var Food = require('./food');
 var Rat = require('./rat');
 
-var readline = require('readline');
-
-
-
 var game = new Game();
 var ratKing = new Baddy( "Rat King", 100, "Chicken Drumsticks"  );
 var steve = new Hero( "Steve", 100, "Chicken Drumsticks" );
@@ -22,7 +18,7 @@ var run = function() {
   }
 }
 
-
+run()
 
 
 
