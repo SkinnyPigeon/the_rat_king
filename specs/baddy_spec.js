@@ -1,4 +1,5 @@
 var Baddy = require('../baddy');
+var Hero = require('../hero');
 var Food = require('../food');
 var Rat = require('../rat');
 
@@ -8,9 +9,13 @@ describe( "The Baddy", function() {
 
   beforeEach( function() {
     ratKing = new Baddy( "Rat King", 100, "Chicken Drumsticks"  )
-    // steve = new Hero( "Steve", 100, "Pizza"  )
+    dangerousMouse = new Baddy( "Dangereous Mouse", 75, "Pizza"  )
+
+    steve = new Hero( "Steve", 100, "Chicken Drumsticks" )
+
     chicken = new Food( "Chicken Drumsticks", 10 )
     toast = new Food( "Toast", 3 )
+
     bob = new Rat( "bob", true )
 
   })
@@ -31,4 +36,20 @@ describe( "The Baddy", function() {
     assert.equal( 97, ratKing.health )
   })
 
+  it( "Baddy should not be able to use special", function() {
+    steve.swipe( ratKing )
+    steve.special( ratKing )
+    steve.special( ratKing )
+    ratKing.special( steve )
+    assert.equal( 0, ratKing.damage )
+  })
+
 } )
+
+
+
+
+
+
+
+
