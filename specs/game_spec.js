@@ -41,6 +41,10 @@ describe( "The Game, Are You Thinking About IT?!?!?!", function() {
     assert.equal( "Steve", game.players[0].name )
   })
 
+  it( "Should allow players to do stuff", function() {
+    game.players[0].special( game.players[1] )
+    assert.equal( 76, game.players[1].health )
+  })
 
 } )
 
