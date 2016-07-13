@@ -12,4 +12,8 @@ describe( "Our Food", function() {
     assert.equal( "Toast", toast.name )
   })
 
+  it( "Should heal", function() {
+    assert.equal( 10, chicken.heal )
+  })
+
 } )
