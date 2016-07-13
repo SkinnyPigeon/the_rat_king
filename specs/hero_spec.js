@@ -54,14 +54,14 @@ describe( "Our Hero", function() {
   })
 
   it( "Hero should gain attack damage", function() {
-    jeff.special();
+    jeff.special( steve );
     assert.equal( 24, jeff.damage )
   })
 
   it( "Poor Steve loses health, 🤕", function() {
     jeff.special( steve )
-    console.log( steve )
-    assert.deepEqual( 76, [steve.health] )
+    // console.log( steve )
+    assert.equal( 76, steve.health )
   })
 
 })
