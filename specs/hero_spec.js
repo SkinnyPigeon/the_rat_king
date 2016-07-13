@@ -7,6 +7,7 @@ describe( "Our Hero", function() {
 
   beforeEach( function() {
     jeff = new Hero( "Jeff", 100, "Chicken Drumsticks"  )
+    steve = new Hero( "Steve", 100, "Pizza"  )
     chicken = new Food( "Chicken Drumsticks", 10 )
     toast = new Food( "Toast", 3 )
   })
