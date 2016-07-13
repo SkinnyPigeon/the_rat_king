@@ -60,7 +60,6 @@ describe( "Our Hero", function() {
 
   it( "Poor Steve loses health, 🤕", function() {
     jeff.special( steve )
-    // console.log( steve )
     assert.equal( 76, steve.health )
   })
 
