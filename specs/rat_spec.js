@@ -10,6 +10,14 @@ describe( "The Rat", function() {
     assert.equal( "dave", dave.name )
   })
 
+  it( "Rat is not diseased", function() {
+    var bob = new Rat( "bob", false );
+    assert.equal( false, bob.diseased )
+  })
 
+  it( "Rat is diseased", function() {
+    var dave = new Rat( "dave", true );
+    assert.equal( true, dave.diseased )
+  })
 
 } )
