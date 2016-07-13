@@ -4,7 +4,7 @@ var Baddy = function( name, health, faveFood ) {
   this.faveFood = faveFood;
   this.damage = 0;
   this.speak = function() {
-    return ( "SKRERREREEEREEEEE " + this.name.toUpperCase() )
+    return ( this.name.toUpperCase() + " SKRERREREEEREEEEE" )
   };
   this.eat = function( food ) {
     if( food.name === this.faveFood ){

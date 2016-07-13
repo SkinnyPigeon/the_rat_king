@@ -44,6 +44,10 @@ describe( "The Baddy", function() {
     assert.equal( 0, ratKing.damage )
   })
 
+  it( "Baddy can say name", function() {
+    assert.equal( "RAT KING SKRERREREEEREEEEE", ratKing.speak() )
+  })
+
 } )
 
 
