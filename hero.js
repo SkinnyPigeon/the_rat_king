@@ -13,13 +13,16 @@ var Hero = function( name, health, faveFood ) {
       return this.health += food.heal
     }
   };
-  this.swipe = function() {
+  this.swipe = function( enemy ) {
     var number = Math.floor(Math.random() * (17 - 11) + 11);
     this.damage = number;
+    enemy.health -= this.damage;
   };
-  this.special = function() {
+  this.special = function( enemy ) {
     if( this.health >= 50 ) {
       this.damage = 24;
+      this.health -= 10;
+      enemy.health -= this.damage;
     }
   }
 }

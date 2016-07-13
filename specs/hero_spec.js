@@ -58,6 +58,12 @@ describe( "Our Hero", function() {
     assert.equal( 24, jeff.damage )
   })
 
+  it( "Poor Steve loses health, 🤕", function() {
+    jeff.special( steve )
+    console.log( steve )
+    assert.deepEqual( 76, [steve.health] )
+  })
+
 })
 
 
