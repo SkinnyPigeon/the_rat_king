@@ -4,7 +4,8 @@ var Food = function( name, heal ) {
   this.taint = false;
   this.poisoning = function( rat ) {
     if( rat.diseased === true ){
-      this.taint = true
+      this.taint = true;
+      this.heal = -heal;
     }
   }
 }
