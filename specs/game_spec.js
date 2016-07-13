@@ -6,7 +6,7 @@ var Rat = require('../rat');
 
 var assert = require('chai').assert;
 
-describe( "The Baddy", function() {
+describe( "The Game, Are You Thinking About IT?!?!?!", function() {
 
   beforeEach( function() {
     game = new Game();
@@ -21,21 +21,37 @@ describe( "The Baddy", function() {
 
     bob = new Rat( "bob", true );
 
+    game.start( steve, ratKing );
+
+
   })
 
   it( "Should have players in players array", function() {
-    game.start( steve, ratKing );
     assert.equal( 2, game.players.length )
   })
 
   it( "Should change players between rounds", function() {
-    game.start( steve, ratKing );
     game.endTurn();
-    assert.deepEqual( "Rat King", game.players[0].name )
+    assert.equal( "Rat King", game.players[0].name )
+  })
+
+  it( "Should be back to player one after two turns", function() {
+    game.endTurn();
+    game.endTurn();
+    assert.equal( "Steve", game.players[0].name )
   })
 
 
 } )
+
+
+
+
+
+
+
+
+
 
 
 
